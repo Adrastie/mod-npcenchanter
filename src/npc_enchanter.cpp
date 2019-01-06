@@ -74,7 +74,6 @@ enum Enchants
 {
     ENCHANT_WEP_LIFETAPE = 3789,
     ENCHANT_WEP_CRUSADER = 1900,
-    ENCHANT_WEP_LIFEWARD = 3241,
     ENCHANT_WEP_BERSERKING = 3789,
     ENCHANT_WEP_BLADE_WARD = 3869,
     ENCHANT_WEP_BLOOD_DRAINING = 3870,
@@ -315,7 +314,6 @@ public:
             player->ADD_GOSSIP_ITEM(1, "Executioner", GOSSIP_SENDER_MAIN, 114);
             player->ADD_GOSSIP_ITEM(1, "Crusader", GOSSIP_SENDER_MAIN, 800);
             player->ADD_GOSSIP_ITEM(1, "Lifetape", GOSSIP_SENDER_MAIN, 801);
-            player->ADD_GOSSIP_ITEM(1, "Lifeward", GOSSIP_SENDER_MAIN, 802);
             player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "Back", GOSSIP_SENDER_MAIN, 300);
             player->PlayerTalkClass->SendGossipMenu(100002, creature->GetGUID());
             return true;
@@ -339,7 +337,6 @@ public:
                 player->ADD_GOSSIP_ITEM(1, "110 Attack Power", GOSSIP_SENDER_MAIN, 117);
                 player->ADD_GOSSIP_ITEM(1, "Crusader", GOSSIP_SENDER_MAIN, 800);
                 player->ADD_GOSSIP_ITEM(1, "Lifetape", GOSSIP_SENDER_MAIN, 801);
-                player->ADD_GOSSIP_ITEM(1, "Lifeward", GOSSIP_SENDER_MAIN, 802);
                 player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "Back", GOSSIP_SENDER_MAIN, 300);
             }
             else
@@ -961,10 +958,6 @@ public:
 
         case 801:
             Enchant(player, creature, player->GetItemByPos(INVENTORY_SLOT_BAG_0, EQUIPMENT_SLOT_MAINHAND), ENCHANT_WEP_LIFETAPE);
-            break;
-
-        case 802:
-            Enchant(player, creature, player->GetItemByPos(INVENTORY_SLOT_BAG_0, EQUIPMENT_SLOT_MAINHAND), ENCHANT_WEP_LIFEWARD);
             break;
 
         case 300:
